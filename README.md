@@ -49,7 +49,73 @@ Datos → Procesamiento → Modelo → API / Dashboard
 ## ⚙️ Cómo ejecutar (provisional)
 > ⚠️ El proyecto aún está en desarrollo, estos pasos pueden cambiar.
 
-1. Clonar el repositorio:
+1. Clonar el repositorio
 ```bash
 git clone <repo-url>
 cd repo
+```
+
+2. Crear entorno
+```bash
+conda env create -f environment.yml
+conda activate fake-news-env
+```
+
+3. Ejecutar pipeline de datos
+```bash
+python src/pipeline.py
+```
+
+4. Entrenar modelo
+```bash
+python src/train.py
+```
+
+5. Ejecutar API
+```bash
+uvicorn src.api:app --reload
+```
+
+6. Acceder a la documentación
+```bash
+http://localhost:8000/docs
+```
+
+---
+
+## 🛠️ Tecnologías
+
+### Lenguaje
+- Python 3.11  
+
+### NLP
+- NLTK  
+- spaCy  
+
+### Machine Learning
+- scikit-learn  
+
+### Deep Learning (opcional)
+- TensorFlow / Keras  
+
+### Gestión de experimentos
+- MLflow  
+
+### Manipulación de datos
+- Pandas  
+- NumPy  
+
+### API
+- FastAPI  
+
+### Base de datos
+- SQLite  
+
+### Visualización
+- Power BI  
+
+### Control de versiones
+- Git + GitHub  
+
+### Entorno
+- Conda  
